@@ -1,0 +1,14 @@
+<view class="my-top">
+  <image class="my_bg" src='http://h5.suitaquba.com/party_image/login_bg.jpg'></image>
+  <view class="myInfo-box">
+    <image></image>
+    <text></text>
+  </view>
+</view>
+<view class="my-function">
+  <view class="my-lis">
+    <image src='http://h5.suitaquba.com/party_image/login_bg.jpg'></image>
+    <text>中共中央委员会</text>
+    <image></image>
+  </view>
+</view>

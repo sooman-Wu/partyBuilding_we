@@ -1,0 +1,44 @@
+<view class='scene-tab'>
+  <view class="tab-lis {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+    热门</view>
+  <view class="tab-lis {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+    最新</view>
+</view>
+<swiper class='circle-wrapper tab-content' current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item class='swiper' wx:for="{{[0,1]}}" wx:key="[0,1]">
+    <scroll-view scroll-y="true" wx:if="{{item == 0}}">
+      <block>
+        <view class="circle-lis" wx:for="{{circle}}" wx:key="circle">
+          <view class="circle-info">
+             <image src='{{item.images}}'></image>
+             <view class="circle-info-right">
+               <view class="h1">{{item.name}}</view>
+               <view class="h3 text-hidden-line">{{item.content}}</view>
+             </view>
+          </view>
+          <view class="image-circle">
+            <image src='{{item.photo}}' data-list="{{item.photo}}" mode="widthFix" bindtap="imgYu"></image>
+          </view>
+          <view class="h2">{{item.time}}</view>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view scroll-y="true" wx:if="{{item == 1}}">
+      <block>
+        <view class="circle-lis" wx:for="{{circle1}}" wx:key="circle1">
+          <view class="circle-info">
+             <image src='{{item.images}}'></image>
+             <view class="circle-info-right">
+               <view class="h1">{{item.name}}</view>
+               <view class="h3 text-hidden-line">{{item.content}}</view>
+             </view>
+          </view>
+          <view class="image-circle">
+            <image src='{{item.photo}}' data-list="{{item.photo}}" mode="widthFix" bindtap="imgYu"></image>
+          </view>
+          <view class="h2">{{item.time}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/special/special",
+    "pages/circle/circle",
+    "pages/study/study",
+    "pages/index/detail",
+    "pages/special/special-detail",
+    "pages/study/study-detail",
+    "pages/orgination/orgination",
+    "pages/activity/activity",
+    "pages/activity/activity-detail",
+    "pages/feedback/feedback",
+    "pages/mine/mine",
+    "pages/data/data",
+    "pages/data/data-detail",
+    "pages/news/news",
+    "pages/login/login",
+    "pages/orgination/orgination1",
+    "pages/mine/activity",
+    "pages/mine/history",
+    "pages/mine/study",
+    "pages/mine/circle",
+    "pages/data/data-detail1",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e50d02",
+    "navigationBarTitleText": "智慧党建",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#e50d02",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/ic_home_enabled_on.png",
+        "selectedIconPath": "pages/images/ic_home_enabled_off.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/special/special",
+        "iconPath": "pages/images/ic_special_enabled_on.png",
+        "selectedIconPath": "pages/images/ic_special_enabled_off.png",
+        "text": "专题"
+      },
+      {
+        "pagePath": "pages/circle/circle",
+        "iconPath": "pages/images/ic_friendscircle_enabled_off.png",
+        "selectedIconPath": "pages/images/ic_friendscircle_enabled_on.png",
+        "text": "圈子"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "iconPath": "pages/images/icon_study_height.png",
+        "selectedIconPath": "pages/images/icon_study.png",
+        "text": "学习"
+      }
+    ]
+  }
+}

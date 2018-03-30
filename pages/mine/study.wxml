@@ -1,0 +1,42 @@
+<view class='scene-tab'>
+  <view class="tab-lis {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+    视频教育</view>
+  <view class="tab-lis {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+    音频教育</view>
+</view>
+<swiper class='study-wrapper tab-content' current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item class='swiper' wx:for="{{[0,1]}}" wx:key="[0,1]">
+    <scroll-view scroll-y  wx:if="{{item == 0}}">
+      <block wx:for="{{study}}" wx:key="study">
+        <view class="study-lis">
+          <navigator url='../study/study-detail?id={{item.id}}&title={{item.fileName}}'>
+            <image class="study-left" src='{{item.image}}'></image>
+            <view class="study-info">
+              <view class="h1">{{item.fileName}}</view>
+              <view class="h3 text-hidden-lines">{{item.desc}}</view>
+              <view class="h2">播放：{{item.playCount}}
+                <text>{{item.updateDate}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view scroll-y  wx:if="{{item == 1}}">
+      <block wx:for="{{study1}}" wx:key="study1">
+        <view class="study-lis">
+          <navigator url='../study/study-detail?id={{item.id}}&title={{item.fileName}}'>
+            <image class="study-left" src='{{item.image}}'></image>
+            <view class="study-info">
+              <view class="h1">{{item.fileName}}</view>
+              <view class="h3 text-hidden-lines">{{item.desc}}</view>
+              <view class="h2">播放：{{item.playCount}}
+                <text>{{item.updateDate}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

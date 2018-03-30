@@ -1,0 +1,6 @@
+<view class="section">
+  <form bindsubmit="formSubmit">
+  <textarea bindblur="bindTextAreaBlur" placeholder="请填入你的建议或意见..."  auto-focus name="opnion"/>
+  <button class="login-submit" formType="submit">提交</button>
+  </form>
+</view>

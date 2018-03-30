@@ -1,0 +1,25 @@
+<view class="news-wrapper">
+<block wx:for="{{news}}" wx:key="news">
+  <view class="news-lis" wx:if="{{item.modelType==3}}">
+    <navigator url='../index/detail?title={{item.title}}&id={{item.id}}'>
+      <image src='{{item.image}}' class="news_img"></image>
+      <view class="h1 text-hidden-line">{{item.title}}</view>
+      <view class="h2">{{item.createDate}}
+        <view>{{item.hits}}
+          <image src='http://h5.suitaquba.com/party_image/looked.png'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="news-lis" wx:else>
+    <navigator url='../index/detail?title={{item.title}}&id={{item.id}}'>
+      <view class="h1 text-hidden-line">{{item.title}}</view>
+      <view class="h2">{{item.createDate}}
+        <view>{{item.hits}}
+          <image src='http://h5.suitaquba.com/party_image/looked.png'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  </block>
+</view>

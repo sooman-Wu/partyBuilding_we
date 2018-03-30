@@ -1,0 +1,48 @@
+<view class="section tc">
+  <video src="https://dangjian.suitaquba.com{{src}}" controls autoplay ></video>
+</view>
+<view class="video-title">
+    {{videoTitle}}
+    <!-- <view class='if_click'><image src='http://h5.suitaquba.com/party_image/circle_zan.png'></image></view> -->
+</view>
+<view class='scene-tab no-fixed'>
+  <view class="tab-lis {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+    目录</view>
+  <view class="tab-lis {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+    简介</view>
+  <view class="tab-lis {{currentTab==2 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+      赞</view>
+</view>
+<swiper class='video-wrapper tab-content no-mar' current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item class='swiper'>
+    <scroll-view scroll-y>
+       <block>
+          <view class="video-lis {{currentNum==index ? 'active' : ''}}" data-num="{{index}}" wx:for="{{detail.tbPartyTeachDataList}}" wx:key="detail.tbPartyTeachDataList" bindtap="changeVideo" data-link="{{item.fileUrl}}" data-id="{{item.id}}">
+            <text class='video-label'>{{index+1}}.</text>
+            <view class="video-info">
+               <view class="h1">{{item.fileName}}</view>
+               <view class="p">已被学习{{item.playCount}}次   <text>已被赞{{item.laudCount}}次</text></view>
+            </view>
+          </view>
+       </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item class='swiper'>
+    <scroll-view scroll-y>
+       <view class="jianjie-info">
+          <view><text>培训讲师：</text>暂无具体讲师</view>
+          <view><text>发布时间：</text>{{detail.updateDate}}</view>
+          <view><text>课程简介：</text>{{detail.desc}}</view>
+       </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item class='swiper'>
+    <scroll-view scroll-y>
+       <view class="like-lis" wx:for="{{laud}}" wx:key="laud">
+          <image src='https://dangjian.suitaquba.com{{item.user.photo}}'></image>
+          <text>{{item.user.name}}</text>
+          <text class="right">{{item.time}} 赞过</text>
+       </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

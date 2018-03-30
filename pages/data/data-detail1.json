@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "活跃度排行统计",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

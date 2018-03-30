@@ -1,0 +1,15 @@
+  <view class="section-scroll find_box grey">
+    <view class='movie_box route_box'>
+    <view class="white_bg" wx:for="{{special}}" wx:key="special">
+    <navigator url='../special/special-detail?title={{item.title}}&id={{item.id}}'>
+      <view class='movie-lis'>
+        <image src="{{item.images}}" mode="widthFix"></image>
+      </view>
+      <view class='route-info'>
+        <view class='h3'>{{item.title}}</view>
+        <view class='h4'>{{item.updateData}}</view>
+      </view>
+      </navigator>
+      </view>
+    </view>
+  </view>

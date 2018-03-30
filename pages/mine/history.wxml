@@ -1,0 +1,20 @@
+<swiper class='study-wrapper' style="height:{{winHeight - 31}}px">
+  <swiper-item class='swiper'>
+    <scroll-view scroll-y>
+      <block wx:for="{{study}}" wx:key="study">
+        <view class="study-lis">
+          <navigator url='../study/study-detail?id={{item.id}}&title={{item.fileName}}'>
+            <image class="study-left" src='{{item.image}}'></image>
+            <view class="study-info">
+              <view class="h1">{{item.fileName}}</view>
+              <view class="h3 text-hidden-lines">{{item.desc}}</view>
+              <view class="h2">播放：{{item.playCount}}
+                <text>{{item.updateDate}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

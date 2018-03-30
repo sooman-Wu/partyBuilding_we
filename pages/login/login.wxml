@@ -1,0 +1,16 @@
+<view class="login-wrapper">
+  <view class="input-box">
+    <form bindsubmit="formSubmit">
+        <view class="input-wrapper">
+        <image src='http://h5.suitaquba.com/party_image/user.png'></image>
+        <input type="text" placeholder="请输入用户名" value="" name="user"/>
+        </view>
+        <view class="input-wrapper">
+        <image src='http://h5.suitaquba.com/party_image/pass.png'></image>
+        <input type="password" placeholder="请输入密码" value="" name="pass" />
+        </view>
+        <button class="login-submit" formType="submit">登录</button>
+    </form>
+  </view>
+  <view class="login-tip {{showView?'tip-show':'tip-hide'}}"><text>登录失败，请重新登录！</text></view>
+</view>

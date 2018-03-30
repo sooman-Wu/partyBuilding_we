@@ -1,0 +1,79 @@
+<view class="banner">
+  <swiper indicator-dots="true" autoplay="{{autoplay}}" indicator-color='#fff' indicator-active-color="#e50d02" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+      <swiper-item>
+        <image src="https://dangjian.suitaquba.com{{item.img}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="function_templet mine-templet">
+   <view class="function-lis">
+    <navigator url='activity'>
+      <image src='http://h5.suitaquba.com/party_image/7(1).png'></image>
+      <view class="p"> 历史活动</view>
+    </navigator>
+  </view>
+  <view class="function-lis">
+    <navigator url='history'>
+      <image src='http://h5.suitaquba.com/party_image/9.png'></image>
+      <view class="p"> 学习历史</view>
+    </navigator>
+  </view>
+  <view class="function-lis">
+    <navigator url='circle'>
+      <image src='http://h5.suitaquba.com/party_image/5.png'></image>
+      <view class="p"> 学习圈</view>
+    </navigator>
+  </view>
+  <view class="function-lis">
+    <navigator url='study'>
+      <image src='http://h5.suitaquba.com/party_image/9 (1).png'></image>
+      <view class="p"> 学习任务</view>
+    </navigator>
+  </view>
+</view>
+
+<view class="news-wrapper">
+<block wx:for="{{indexNews}}" wx:key="indexNews">
+  <view class="news-lis" wx:if="{{item.modelType==1}}">
+    <navigator url='../index/detail?title={{item.title}}&id={{item.id}}'>
+    <view class="news-type">
+    <view class="news-type-left">
+      <view class="h1 text-hidden-line">{{item.title}}</view>
+      <view class="h2">{{item.createDate}}
+        <view>{{item.hits}}
+          <image src='http://h5.suitaquba.com/party_image/looked.png' lazy-load></image>
+        </view>
+      </view>
+    </view>
+    <view class="news-type-right">
+      <image src="{{item.image}}" lazy-load></image>
+    </view>
+    </view>
+    </navigator>
+  </view>
+  <view class="news-lis" wx:if="{{item.modelType==3&&item.image!=undefined}}">
+    <navigator url='../index/detail?title={{item.title}}&id={{item.id}}'>
+      <image src='{{item.image}}' class="news_img" mode='widthFix'></image>
+      <view class="h1 text-hidden-line">{{item.title}}</view>
+      <view class="h2">{{item.createDate}}
+        <view>{{item.hits}}
+          <image src='http://h5.suitaquba.com/party_image/looked.png' lazy-load></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="news-lis" wx:if="{{item.modelType==0||item.modelType==2||item.image==undefined}}">
+    <navigator url='../index/detail?title={{item.title}}&id={{item.id}}'>
+      <view class="h1 text-hidden-line">{{item.title}}</view>
+      <view class="h2">{{item.createDate}}
+        <view>{{item.hits}}
+          <image src='http://h5.suitaquba.com/party_image/looked.png' lazy-load></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  </block>
+</view>

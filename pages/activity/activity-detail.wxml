@@ -1,0 +1,22 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="orgination-wrapper activity-wrapper">
+  活动标题：{{activityDetail.title}}
+</view>
+<view class="orgination-wrapper activity-wrapper">
+  开始时间：{{activityDetail.createDate}}
+</view>
+<view class="orgination-wrapper activity-wrapper">
+  结束时间：{{activityDetail.endDate}}
+</view>
+<view class="orgination-wrapper activity-wrapper" wx:if="{{activityDetail.status == 1}}">
+  活动状态：未开始
+</view>
+<view class="orgination-wrapper activity-wrapper" wx:if="{{activityDetail.status == 2}}">
+  活动状态：正在进行
+</view>
+<view class="orgination-wrapper activity-wrapper" wx:if="{{activityDetail.status == 3}}">
+  活动状态：已结束
+</view>
+<view class="orgination-wrapper activity-wrapper">
+  活动描述：<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>

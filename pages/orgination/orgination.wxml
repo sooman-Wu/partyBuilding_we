@@ -1,0 +1,6 @@
+<view class="orgination-wrapper" wx:for="{{orgination}}">
+  <navigator url='../orgination/orgination1?id={{item.id}}&title={{item.name}}'>
+    {{item.name}}
+  <view class="arrow"><image src='http://h5.suitaquba.com/party_image/arrow_right.png'></image></view>
+  </navigator>
+</view>

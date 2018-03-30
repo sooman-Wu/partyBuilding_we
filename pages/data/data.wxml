@@ -1,0 +1,16 @@
+<view class="mine-list data-wrapper">
+  <view class="mine-lis">
+    <navigator url='../data/data-detail'>
+      <image src='http://h5.suitaquba.com/party_image/icon_fupin_shuliang.png'></image>
+      党建信息统计
+      <image class="float__right" src='http://h5.suitaquba.com/party_image/arrow_right.png'></image>
+    </navigator>
+  </view>
+  <view class="mine-lis">
+    <navigator url='../data/data-detail1'>
+      <image src='http://h5.suitaquba.com/party_image/icon_fupin_xinxi.png'></image>
+      活跃度排行统计
+      <image class="float__right" src='http://h5.suitaquba.com/party_image/arrow_right.png'></image>
+    </navigator>
+  </view>
+</view>
