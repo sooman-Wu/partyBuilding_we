@@ -1,0 +1,7 @@
+<view class="section nick-wrapper">
+  <form bindsubmit="formSubmit">
+  <input type="text" value=""  placeholder="请输入昵称" name="nick"/>
+  <button class="login-submit" formType="submit">确定</button>
+  </form>
+  <view class="login-tip {{showView?'tip-show':'tip-hide'}}"><text>昵称不能为空！</text></view>
+</view>

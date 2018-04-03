@@ -1,4 +1,5 @@
 const url = 'https://dangjian.suitaquba.com/a/ios/';
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
 
   /**
@@ -6,6 +7,7 @@ Page({
    */
 
   data: {
+    detail: [],
   },
 
   /**
@@ -13,26 +15,21 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    var header = getApp().globalData.header;
-    if (wx.getStorageSync('sessionId') == '') {
-      wx.redirectTo({
-        url: '../login/login'
-      })
-    } else {
-      wx.request({
-        url: url + 'info',
-        method: 'GET',
-        header: header,
-        success: function (res) {
-          that.setData({
-            my: res.data.data
-          }),
-            wx.setNavigationBarTitle({
-              title: '个人中心'//页面标题为路由参数
-            })
-        }
-      })
-    }
+    wx.request({
+      url: url + 'aboutinfo',
+      method: 'GET',
+      success: function (res) {
+        var gonglue = res.data.data.content;
+       WxParse.wxParse('gonglue', 'html', gonglue, that,0);
+        that.setData({
+          title: options.title,
+          detail: res.data.data
+        }),
+          wx.setNavigationBarTitle({
+            title: '关于我们'//页面标题为路由参数
+          })
+      }
+    })
     // var queryBean = JSON.parse(options.queryBean);
     // that.setData({
     //   queryBean: queryBean

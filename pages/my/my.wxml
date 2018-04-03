@@ -1,14 +1,42 @@
 <view class="my-top">
-  <image class="my_bg" src='http://h5.suitaquba.com/party_image/login_bg.jpg'></image>
+  <image class="my_bg" src='http://h5.suitaquba.com/party_image/login_bg.jpg' mode="widthFix"></image>
   <view class="myInfo-box">
-    <image></image>
-    <text></text>
+  <navigator url='../edit/edit'>
+    <image src="https://dangjian.suitaquba.com{{my.photo}}"></image>
+    <text>{{my.name}}</text>
+    </navigator>
   </view>
 </view>
 <view class="my-function">
   <view class="my-lis">
-    <image src='http://h5.suitaquba.com/party_image/login_bg.jpg'></image>
-    <text>中共中央委员会</text>
-    <image></image>
+  <navigator url='../orgination/orgination'>
+    <image src='http://h5.suitaquba.com/party_image/ic_certification.png' mode="widthFix"></image>
+    <text>{{my.parentOffice}}</text>
+    <image src='http://h5.suitaquba.com/party_image/arrow_right.png' class='arrow-right'></image>
+    </navigator>
+  </view>
+  <view class="my-lis">
+    <image src='http://h5.suitaquba.com/party_image/ic_mine_score.png' mode="widthFix"></image>
+    <text>我的学习积分</text>
+    <text class="text-right">{{my.integral}}</text>
+  </view>
+  <view class="my-lis">
+    <image src='http://h5.suitaquba.com/party_image/icon_study_time.png' mode="widthFix"></image>
+    <text>我的学习时长</text>
+    <text class="text-right">{{my.time}}</text>
+  </view>
+  <view class="my-lis">
+  <navigator url='../about/about'>
+    <image src='http://h5.suitaquba.com/party_image/ic_about.png' mode="widthFix"></image>
+    <text>关于我们</text>
+    <image src='http://h5.suitaquba.com/party_image/arrow_right.png' class='arrow-right'></image>
+    </navigator>
+  </view>
+  <view class="my-lis">
+  <navigator url='../feedback/feedback'>
+    <image src='http://h5.suitaquba.com/party_image/ic_about.png' mode="widthFix"></image>
+    <text>意见反馈</text>
+    <image src='http://h5.suitaquba.com/party_image/arrow_right.png' class='arrow-right'></image>
+    </navigator>
   </view>
 </view>

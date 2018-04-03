@@ -1,4 +1,4 @@
-<view class="orgination-wrapper activity-wrapper" wx:for="{{activity}}">
+<view class="orgination-wrapper activity-wrapper" wx:for="{{activity}}" wx:key="activity">
   <navigator url='../activity/activity-detail?id={{item.id}}&title={{item.title}}'>
     <image src='http://h5.suitaquba.com/party_image/icon_zhibu_title.png' class='activity-label'></image>{{item.title}}
     <view class="arrow" wx:if="{{item.status == 1}}">未开始

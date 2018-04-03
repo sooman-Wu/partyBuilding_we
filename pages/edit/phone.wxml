@@ -1,0 +1,10 @@
+<view class="section nick-wrapper">
+  <form bindsubmit="formSubmit">
+  <input type="text" placeholder="请输入原手机号" value="" name="oldPhone"/>
+  <input type="text" placeholder="请输入验证码" value="" name="code"/>
+  <input type="text" placeholder="请输入新手机号" value="" name="newPhone"/>
+  <input type="text" placeholder="请再次输入新手机号" value="" name="phone"/>
+  <button class="login-submit" formType="submit">确定</button>
+  </form>
+  <view class="login-tip {{showView?'tip-show':'tip-hide'}}"><text>昵称不能为空！</text></view>
+</view>

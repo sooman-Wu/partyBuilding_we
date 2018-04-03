@@ -14,6 +14,7 @@
     "pages/mine/mine",
     "pages/data/data",
     "pages/data/data-detail",
+    "pages/about/about",
     "pages/news/news",
     "pages/login/login",
     "pages/orgination/orgination1",
@@ -22,7 +23,10 @@
     "pages/mine/study",
     "pages/mine/circle",
     "pages/data/data-detail1",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/edit/edit",
+    "pages/edit/nickName",
+    "pages/edit/phone"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -57,6 +61,12 @@
         "iconPath": "pages/images/icon_study_height.png",
         "selectedIconPath": "pages/images/icon_study.png",
         "text": "学习"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "pages/images/ic_mine_enabled_on.png",
+        "selectedIconPath": "pages/images/ic_mine_enabled_off.png",
+        "text": "我的"
       }
     ]
   }

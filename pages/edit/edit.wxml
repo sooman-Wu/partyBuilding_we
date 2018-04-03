@@ -1,0 +1,30 @@
+<view class="my-function">
+  <view class="my-lis image_set">
+    <image src='http://h5.suitaquba.com/party_image/ic_portrait.png' mode="widthFix"></image>
+    <text>设置头像</text>
+    <image src='https://dangjian.suitaquba.com{{my.photo}}' class='arrow-right image-edit'></image>
+  </view>
+  <view class="my-lis">
+  <navigator url='nickName'>
+    <image src='http://h5.suitaquba.com/party_image/ic_nickname.png' mode="widthFix"></image>
+    <text>修改昵称</text>
+    <image src='http://h5.suitaquba.com/party_image/arrow_right.png' class='arrow-right'></image>
+    <text class="text-right">{{my.name}}</text>
+    </navigator>
+  </view>
+  <view class="my-lis">
+  <navigator url='../orgination/orgination'>
+    <image src='http://h5.suitaquba.com/party_image/ic_phone_num.png' mode="widthFix"></image>
+    <text>修改手机号</text>
+    <image src='http://h5.suitaquba.com/party_image/arrow_right.png' class='arrow-right'></image>
+    <text class="text-right">{{my.mobile}}</text>
+    </navigator>
+  </view>
+  <view class="my-lis">
+  <navigator url='../about/about'>
+    <image src='http://h5.suitaquba.com/party_image/ic_password.png' mode="widthFix"></image>
+    <text>修改密码</text>
+    <image src='http://h5.suitaquba.com/party_image/arrow_right.png' class='arrow-right'></image>
+    </navigator>
+  </view>
+</view>

@@ -1,7 +1,7 @@
 <view class="section tc">
   <video src="https://dangjian.suitaquba.com{{src}}" controls autoplay ></video>
 </view>
-<view class="video-title">
+<view class="video-title text-hidden-line">
     {{videoTitle}}
     <!-- <view class='if_click'><image src='http://h5.suitaquba.com/party_image/circle_zan.png'></image></view> -->
 </view>
@@ -20,7 +20,7 @@
           <view class="video-lis {{currentNum==index ? 'active' : ''}}" data-num="{{index}}" wx:for="{{detail.tbPartyTeachDataList}}" wx:key="detail.tbPartyTeachDataList" bindtap="changeVideo" data-link="{{item.fileUrl}}" data-id="{{item.id}}">
             <text class='video-label'>{{index+1}}.</text>
             <view class="video-info">
-               <view class="h1">{{item.fileName}}</view>
+               <view class="h1 text-hidden-line">{{item.fileName}}</view>
                <view class="p">已被学习{{item.playCount}}次   <text>已被赞{{item.laudCount}}次</text></view>
             </view>
           </view>
